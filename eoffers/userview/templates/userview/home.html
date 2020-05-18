@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Offers</title>
+</head>
+<body>
+	<div class="container">
+		<div>
+			{% if offer %}
+				<h2>{{ offer.heading }}</h2>
+				{% if offer.subheading %}
+					<h3>{{ offer.subheading }}</h3>
+				{% endif %}
+				{% if offer.image_1 %}
+					<img src="{{ offer.image_1.url }}">
+				{% endif %}
+				{% if offer.image_2 %}
+					<img src="{{ offer.image_2.url }}">
+				{% endif %}
+				{% if offer.image_3 %}
+					<img src="{{ offer.image_3.url }}">
+				{% endif %}
+				{% if offer.offer_details %}
+					<p>{{ offer.offer_details }}</p>
+				{% endif %}
+				{% if offer.t_and_c %}
+					<p>{{ offer.t_and_c }}</p>
+				{% endif %}
+				{% if offer.offer_link %}
+					<a href="{{ offer.offer_link }}" target="_blank">{{ offer.offer_link }}</a>
+				{% endif %}
+				{% if offer.discount %}
+					<p>Rs {{ offer.discount }}</p>
+				{% endif %}
+				{% if offer.discount %}
+					<p>Rs {{ offer.discount }}</p>
+				{% endif %}
+				{% if offer.coupon_code %}
+					<p>Rs {{ offer.coupon_code }}</p>
+				{% endif %}
+				{% if offer.normal_discount %}
+					<p>Rs {{ offer.normal_discount }}</p>
+				{% endif %}
+				{% if offer.price_trend %}
+					<p>Rs {{ offer.price_trend }}</p>
+				{% endif %}
+				{% if offer.savings %}
+					<p>Rs {{ offer.savings }}</p>
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+</body>
+</html>
